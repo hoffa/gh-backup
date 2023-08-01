@@ -5,7 +5,6 @@ gh auth status || gh auth login
 
 username=$(gh api user --jq .login)
 dirname=github-backup-${username}-$(date -u +"%Y%m%dT%H%M%SZ")
-
 mkdir "${dirname}"
 cd "${dirname}"
 
