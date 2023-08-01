@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/hoffa/gh-backup/actions/workflows/tests.yml/badge.svg)](https://github.com/hoffa/gh-backup/actions/workflows/tests.yml)
 
-Zero-config script to backup GitHub repos and gists.
+Zero-config [script](gh-backup.sh) to backup GitHub repos and gists.
 
 Requires [GitHub CLI](https://cli.github.com).
 
