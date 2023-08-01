@@ -2,7 +2,7 @@
 set -eux
 
 username=$(gh api user --jq .login)
-dirname=gh-backup-${username}-$(date -u +"%Y%m%dT%H%M%SZ")
+dirname=github-backup-${username}-$(date -u +"%Y%m%dT%H%M%SZ")
 
 mkdir "${dirname}"
 cd "${dirname}"
@@ -21,7 +21,7 @@ mkdir repos
 cd repos
 gh repo list | while read -r repo; do
 	name=$(echo "${repo}" | cut -f 1)
-	gh repo clone "${name}" -- --depth 1
+	gh repo clone "${name}"
 done
 cd ..
 
