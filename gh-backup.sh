@@ -1,6 +1,12 @@
 #!/bin/sh
 set -eux
 
+if ! command -v sh >/dev/null; then
+	echo "gh not found"
+	echo "On macOS, you can install it with Homebrew:"
+	echo "  brew install gh"
+fi
+
 gh auth status || gh auth login
 
 username=$(gh api user --jq .login)
